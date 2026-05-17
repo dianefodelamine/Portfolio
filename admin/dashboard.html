@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tableau de bord administrateur du portfolio de Fode Lamine Diane. Gestion du contenu et statistiques.">
+  <meta name="keywords" content="admin, dashboard, portfolio">
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <title>Admin - Tableau de bord</title>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+  <div class="admin-layout">
+    <header class="admin-header">
+      <div class="admin-header-inner">
+        <h1 class="admin-title">Tableau de bord administrateur</h1>
+        <div class="admin-user">
+          <span class="user-name">Fode Lamine Diane</span>
+          <a href="login.html" class="logout-button">Déconnexion</a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="admin-sidebar">
+      <ul class="sidebar-menu">
+        <li class="menu-item active">
+          <a href="dashboard.html">Tableau de bord</a>
+        </li>
+        <li class="menu-section">Gestion du contenu</li>
+        <li class="menu-item">
+          <a href="edit-home.html">Page d'accueil</a>
+        </li>
+        <li class="menu-item">
+          <a href="edit-about.html">À propos</a>
+        </li>
+        <li class="menu-item">
+          <a href="edit-projects.html">Projets</a>
+        </li>
+        <li class="menu-item">
+          <a href="edit-contact.html">Contact</a>
+        </li>
+        <li class="menu-section">Interactions</li>
+        <li class="menu-item">
+          <a href="messages.html">Messages</a>
+        </li>
+        <li class="menu-item">
+          <a href="questions.html">Questions du chatbot</a>
+        </li>
+        <li class="menu-section">Gestion</li>
+        <li class="menu-item">
+          <a href="settings.html">Paramètres</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="admin-main" id="main-content">
+      <section class="dashboard-header">
+        <h2>Bienvenue sur le tableau de bord</h2>
+        <p class="dashboard-subtitle">Contenu par défaut : cet aperçu affiche les statistiques principales et les raccourcis d'administration.</p>
+      </section>
+
+      <section class="dashboard-kpi">
+        <article class="kpi-card">
+          <header class="kpi-header">
+            <h3>Visites du site</h3>
+          </header>
+          <div class="kpi-value">
+            <p class="kpi-number">0</p>
+            <p class="kpi-label">Contenu par défaut</p>
+          </div>
+        </article>
+
+        <article class="kpi-card">
+          <header class="kpi-header">
+            <h3>Messages reçus</h3>
+          </header>
+          <div class="kpi-value">
+            <p class="kpi-number">0</p>
+            <p class="kpi-label">Contenu par défaut</p>
+          </div>
+        </article>
+
+        <article class="kpi-card">
+          <header class="kpi-header">
+            <h3>Questions posées</h3>
+          </header>
+          <div class="kpi-value">
+            <p class="kpi-number">0</p>
+            <p class="kpi-label">Contenu par défaut</p>
+          </div>
+        </article>
+
+        <article class="kpi-card">
+          <header class="kpi-header">
+            <h3>Projets publiés</h3>
+          </header>
+          <div class="kpi-value">
+            <p class="kpi-number">0</p>
+            <p class="kpi-label">Contenu par défaut</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="dashboard-charts">
+        <article class="chart-widget">
+          <header class="widget-header">
+            <h3>Visites des 7 derniers jours</h3>
+          </header>
+          <div class="widget-body">
+            <canvas id="visitsChart"></canvas>
+          </div>
+        </article>
+
+        <article class="chart-widget">
+          <header class="widget-header">
+            <h3>Interactions par type</h3>
+          </header>
+          <div class="widget-body">
+            <canvas id="interactionsChart"></canvas>
+          </div>
+        </article>
+      </section>
+
+      <section class="dashboard-actions">
+        <h3>Actions rapides</h3>
+        <nav class="quick-actions">
+          <a href="edit-home.html" class="action-button">Éditer la page d'accueil</a>
+          <a href="edit-projects.html" class="action-button">Ajouter un projet</a>
+          <a href="edit-contact.html" class="action-button">Mettre à jour les coordonnées</a>
+          <a href="settings.html" class="action-button">Paramètres</a>
+        </nav>
+      </section>
+    </main>
+  </div>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

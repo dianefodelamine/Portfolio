@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Édition de la page Contact dans l'admin du portfolio de Fode Lamine Diane.">
+  <meta name="keywords" content="admin, édition, contact">
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/main.css">
+  <title>Admin - Éditer Contact</title>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+  <div class="admin-layout">
+    <header class="admin-header">
+      <div class="admin-header-inner">
+        <h1 class="admin-title">Tableau de bord administrateur</h1>
+        <div class="admin-user">
+          <span class="user-name">Fode Lamine Diane</span>
+          <a href="login.html" class="logout-button">Déconnexion</a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="admin-sidebar">
+      <ul class="sidebar-menu">
+        <li class="menu-item">
+          <a href="dashboard.html">Tableau de bord</a>
+        </li>
+        <li class="menu-section">Gestion du contenu</li>
+        <li class="menu-item">
+          <a href="edit-home.html">Page d'accueil</a>
+        </li>
+        <li class="menu-item">
+          <a href="edit-about.html">À propos</a>
+        </li>
+        <li class="menu-item">
+          <a href="edit-projects.html">Projets</a>
+        </li>
+        <li class="menu-item active">
+          <a href="edit-contact.html">Contact</a>
+        </li>
+        <li class="menu-section">Interactions</li>
+        <li class="menu-item">
+          <a href="messages.html">Messages</a>
+        </li>
+        <li class="menu-item">
+          <a href="questions.html">Questions du chatbot</a>
+        </li>
+        <li class="menu-section">Gestion</li>
+        <li class="menu-item">
+          <a href="settings.html">Paramètres</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="admin-main" id="main-content">
+      <header class="page-header">
+        <h2>Éditer la page Contact</h2>
+        <p>Contenu par défaut : modifiez vos coordonnées et le texte de la page.</p>
+      </header>
+
+      <form class="edit-form" action="#" method="post">
+        <section class="form-section">
+          <h3>Section Introduction</h3>
+
+          <div class="form-group">
+            <label for="contact-title">Titre principal</label>
+            <input type="text" id="contact-title" name="contact_title" placeholder="Contactez-moi" value="Contactez-moi" />
+          </div>
+
+          <div class="form-group">
+            <label for="contact-subtitle">Sous-titre</label>
+            <textarea id="contact-subtitle" name="contact_subtitle" rows="2" placeholder="Texte introductif">Vous souhaitez travailler ensemble ou en savoir plus ? Envoyez un message via le formulaire ci-dessous.</textarea>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h3>Coordonnées de contact</h3>
+
+          <div class="form-group">
+            <label for="contact-email">Email</label>
+            <input type="email" id="contact-email" name="contact_email" placeholder="contact@example.com" value="contact@example.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="contact-phone">Téléphone</label>
+            <input type="tel" id="contact-phone" name="contact_phone" placeholder="+33 6 00 00 00 00" value="+33 6 00 00 00 00" />
+          </div>
+
+          <div class="form-group">
+            <label for="contact-location">Localisation</label>
+            <input type="text" id="contact-location" name="contact_location" placeholder="Ville, Pays" value="Ville, Pays" />
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h3>Adresse électronique pour les soumissions</h3>
+
+          <div class="form-group">
+            <label for="form-submit-email">Email de réception des messages</label>
+            <input type="email" id="form-submit-email" name="form_submit_email" placeholder="admin@example.com" value="admin@example.com" />
+            <p class="field-help">Les messages du formulaire seront envoyés à cette adresse.</p>
+          </div>
+        </section>
+
+        <div class="form-actions">
+          <button type="submit" class="button-primary">Enregistrer les modifications</button>
+          <a href="dashboard.html" class="button-secondary">Annuler</a>
+        </div>
+      </form>
+    </main>
+  </div>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

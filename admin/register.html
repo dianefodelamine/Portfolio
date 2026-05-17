@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Inscription du premier administrateur pour le portfolio de Fode Lamine Diane.">
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/forms.css">
+  <title>Admin - Inscription</title>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+  <div class="login-container">
+    <main class="login-main" id="main-content">
+      <section class="login-form-section">
+        <header class="login-header">
+          <h1>Créer le compte administrateur</h1>
+          <p>Première connexion sécurisée</p>
+        </header>
+
+        <form class="register-form" action="#" method="post">
+          <div class="form-group">
+            <label for="full_name">Nom complet</label>
+            <input type="text" id="full_name" name="full_name" placeholder="Entrez votre nom complet" required />
+          </div>
+
+          <div class="form-group">
+            <label for="username">Nom d'utilisateur</label>
+            <input type="text" id="username" name="username" placeholder="Entrez un nom d'utilisateur" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Adresse email</label>
+            <input type="email" id="email" name="email" placeholder="Entrez votre adresse email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Téléphone</label>
+            <input type="tel" id="phone" name="phone" placeholder="Entrez votre numéro de téléphone" required />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" name="password" placeholder="Entrez un mot de passe" required />
+          </div>
+
+          <div class="form-group">
+            <label for="confirm-password">Confirmez le mot de passe</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirmez le mot de passe" required />
+          </div>
+
+          <button type="submit" class="button-primary">Créer l'administrateur</button>
+        </form>
+
+        <footer class="login-footer">
+          <p>Déjà inscrit ? <a href="login.html">Connectez-vous ici.</a></p>
+        </footer>
+      </section>
+    </main>
+  </div>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

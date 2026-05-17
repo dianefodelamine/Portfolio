@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gestion des questions du chatbot dans l'admin du portfolio de Fode Lamine Diane.">
+  <meta name="keywords" content="admin, questions, chatbot">
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/main.css">
+  <title>Admin - Questions</title>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+  <div class="admin-layout">
+    <header class="admin-header">
+      <div class="admin-header-inner">
+        <h1 class="admin-title">Tableau de bord administrateur</h1>
+        <div class="admin-user">
+          <span class="user-name">Fode Lamine Diane</span>
+          <a href="login.html" class="logout-button">Déconnexion</a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="admin-sidebar">
+      <ul class="sidebar-menu">
+        <li class="menu-item">
+          <a href="dashboard.html">Tableau de bord</a>
+        </li>
+        <li class="menu-section">Gestion du contenu</li>
+        <li class="menu-item">
+          <a href="edit-home.html">Page d'accueil</a>
+        </li>
+        <li class="menu-item">
+          <a href="edit-about.html">À propos</a>
+        </li>
+        <li class="menu-item">
+          <a href="edit-projects.html">Projets</a>
+        </li>
+        <li class="menu-item">
+          <a href="edit-contact.html">Contact</a>
+        </li>
+        <li class="menu-section">Interactions</li>
+        <li class="menu-item">
+          <a href="messages.html">Messages</a>
+        </li>
+        <li class="menu-item active">
+          <a href="questions.html">Questions du chatbot</a>
+        </li>
+        <li class="menu-section">Gestion</li>
+        <li class="menu-item">
+          <a href="settings.html">Paramètres</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="admin-main" id="main-content">
+      <header class="page-header">
+        <h2>Questions posées au chatbot</h2>
+        <p>Contenu par défaut : historique de toutes les questions posées par les utilisateurs et les réponses générées.</p>
+      </header>
+
+      <section class="questions-management">
+        <div class="questions-toolbar">
+          <input type="text" class="search-box" placeholder="Rechercher une question..." />
+          <select class="filter-status">
+            <option value="">Tous les statuts</option>
+            <option value="resolved">Résolu</option>
+            <option value="pending">En attente</option>
+            <option value="flagged">Signalé</option>
+          </select>
+        </div>
+
+        <table class="questions-table">
+          <thead>
+            <tr>
+              <th>Question</th>
+              <th>Réponse générée</th>
+              <th>Feedback utilisateur</th>
+              <th>Date</th>
+              <th>Statut</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="question-row">
+              <td>Quelle est votre expérience en frontend ?</td>
+              <td>Exemple de réponse générée automatiquement...</td>
+              <td>Utile</td>
+              <td>01 Jan 2024 10:30</td>
+              <td><span class="status-resolved">Résolu</span></td>
+              <td>
+                <a href="#" class="action-view">Voir</a>
+                <a href="#" class="action-delete">Supprimer</a>
+              </td>
+            </tr>
+            <tr class="question-row">
+              <td>Comment puis-je vous contacter pour un projet ?</td>
+              <td>Exemple de réponse générée automatiquement...</td>
+              <td>Peu utile</td>
+              <td>02 Jan 2024 14:15</td>
+              <td><span class="status-flagged">Signalé</span></td>
+              <td>
+                <a href="#" class="action-view">Voir</a>
+                <a href="#" class="action-delete">Supprimer</a>
+              </td>
+            </tr>
+            <tr class="question-row">
+              <td>Quelles technologies maîtrisez-vous ?</td>
+              <td>Exemple de réponse générée automatiquement...</td>
+              <td>Sans réponse</td>
+              <td>03 Jan 2024 09:45</td>
+              <td><span class="status-pending">En attente</span></td>
+              <td>
+                <a href="#" class="action-view">Voir</a>
+                <a href="#" class="action-delete">Supprimer</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <section class="question-detail">
+          <h3>Détail d'une question</h3>
+          <p class="section-note">Contenu par défaut : sélectionnez une question pour voir le détail complet.</p>
+
+          <article class="question-detail-card">
+            <header class="detail-header">
+              <h4>Question reçue</h4>
+              <p class="detail-date">01 Jan 2024 à 10:30</p>
+            </header>
+            <div class="detail-body">
+              <p>Quelle est votre expérience en frontend ?</p>
+            </div>
+
+            <header class="detail-header">
+              <h4>Réponse générée</h4>
+            </header>
+            <div class="detail-body">
+              <p>Ceci est une réponse générée par le chatbot basée sur les données du site.</p>
+            </div>
+
+            <footer class="detail-footer">
+              <p><strong>Feedback utilisateur :</strong> Utile</p>
+              <p><strong>Statut :</strong> Résolu</p>
+              <div class="detail-actions">
+                <button class="button-primary">Mettre à jour la réponse</button>
+                <button class="button-secondary">Marquer comme résolu</button>
+              </div>
+            </footer>
+          </article>
+        </section>
+      </section>
+
+      <div class="form-actions">
+        <a href="dashboard.html" class="button-secondary">Retour au tableau de bord</a>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

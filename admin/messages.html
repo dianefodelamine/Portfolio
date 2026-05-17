@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gestion des messages de contact dans l'admin du portfolio de Fode Lamine Diane.">
+  <meta name="keywords" content="admin, messages, contact">
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/main.css">
+  <title>Admin - Messages</title>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+  <div class="admin-layout">
+    <header class="admin-header">
+      <div class="admin-header-inner">
+        <h1 class="admin-title">Tableau de bord administrateur</h1>
+        <div class="admin-user">
+          <span class="user-name">Fode Lamine Diane</span>
+          <a href="login.html" class="logout-button">Déconnexion</a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="admin-sidebar">
+      <ul class="sidebar-menu">
+        <li class="menu-item">
+          <a href="dashboard.html">Tableau de bord</a>
+        </li>
+        <li class="menu-section">Gestion du contenu</li>
+        <li class="menu-item">
+          <a href="edit-home.html">Page d'accueil</a>
+        </li>
+        <li class="menu-item">
+          <a href="edit-about.html">À propos</a>
+        </li>
+        <li class="menu-item">
+          <a href="edit-projects.html">Projets</a>
+        </li>
+        <li class="menu-item">
+          <a href="edit-contact.html">Contact</a>
+        </li>
+        <li class="menu-section">Interactions</li>
+        <li class="menu-item active">
+          <a href="messages.html">Messages</a>
+        </li>
+        <li class="menu-item">
+          <a href="questions.html">Questions du chatbot</a>
+        </li>
+        <li class="menu-section">Gestion</li>
+        <li class="menu-item">
+          <a href="settings.html">Paramètres</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="admin-main" id="main-content">
+      <header class="page-header">
+        <h2>Messages reçus</h2>
+        <p>Contenu par défaut : tous les messages envoyés via le formulaire de contact.</p>
+      </header>
+
+      <section class="messages-management">
+        <div class="messages-toolbar">
+          <input type="text" class="search-box" placeholder="Rechercher un message..." />
+          <select class="filter-status">
+            <option value="">Tous les statuts</option>
+            <option value="unread">Non lus</option>
+            <option value="read">Lus</option>
+            <option value="archived">Archivés</option>
+          </select>
+        </div>
+
+        <div class="messages-list">
+          <article class="message-item unread">
+            <header class="message-header">
+              <h3>Message 1 - Contenu par défaut</h3>
+              <span class="message-status">Non lu</span>
+            </header>
+            <div class="message-body">
+              <p><strong>De :</strong> Nom Prénom (email@example.com)</p>
+              <p><strong>Contenu :</strong> Ceci est un exemple de message reçu via le formulaire de contact.</p>
+              <p><strong>Date :</strong> 01 Jan 2024 à 10:30</p>
+            </div>
+            <footer class="message-actions">
+              <a href="#" class="action-view">Voir</a>
+              <a href="#" class="action-mark-read">Marquer comme lu</a>
+              <a href="#" class="action-delete">Supprimer</a>
+            </footer>
+          </article>
+
+          <article class="message-item read">
+            <header class="message-header">
+              <h3>Message 2 - Contenu par défaut</h3>
+              <span class="message-status">Lu</span>
+            </header>
+            <div class="message-body">
+              <p><strong>De :</strong> Autre Personne (autre@example.com)</p>
+              <p><strong>Contenu :</strong> Ceci est un autre exemple de message, déjà consulté.</p>
+              <p><strong>Date :</strong> 02 Jan 2024 à 14:15</p>
+            </div>
+            <footer class="message-actions">
+              <a href="#" class="action-view">Voir</a>
+              <a href="#" class="action-mark-unread">Marquer comme non lu</a>
+              <a href="#" class="action-delete">Supprimer</a>
+            </footer>
+          </article>
+        </div>
+
+        <div class="empty-state">
+          <p>Aucun nouveau message. Contenu par défaut.</p>
+        </div>
+      </section>
+
+      <div class="form-actions">
+        <a href="dashboard.html" class="button-secondary">Retour au tableau de bord</a>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

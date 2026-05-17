@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Paramètres du site dans l'admin du portfolio de Fode Lamine Diane.">
+  <meta name="keywords" content="admin, paramètres, site">
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/main.css">
+  <title>Admin - Paramètres</title>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+  <div class="admin-layout">
+    <header class="admin-header">
+      <div class="admin-header-inner">
+        <h1 class="admin-title">Tableau de bord administrateur</h1>
+        <div class="admin-user">
+          <span class="user-name">Fode Lamine Diane</span>
+          <a href="login.html" class="logout-button">Déconnexion</a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="admin-sidebar">
+      <ul class="sidebar-menu">
+        <li class="menu-item">
+          <a href="dashboard.html">Tableau de bord</a>
+        </li>
+        <li class="menu-section">Gestion du contenu</li>
+        <li class="menu-item">
+          <a href="edit-home.html">Page d'accueil</a>
+        </li>
+        <li class="menu-item">
+          <a href="edit-about.html">À propos</a>
+        </li>
+        <li class="menu-item">
+          <a href="edit-projects.html">Projets</a>
+        </li>
+        <li class="menu-item">
+          <a href="edit-contact.html">Contact</a>
+        </li>
+        <li class="menu-section">Interactions</li>
+        <li class="menu-item">
+          <a href="messages.html">Messages</a>
+        </li>
+        <li class="menu-item">
+          <a href="questions.html">Questions du chatbot</a>
+        </li>
+        <li class="menu-section">Gestion</li>
+        <li class="menu-item active">
+          <a href="settings.html">Paramètres</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="admin-main" id="main-content">
+      <header class="page-header">
+        <h2>Paramètres et configuration</h2>
+        <p>Contenu par défaut : gérez votre profil, le site et les préférences de l'admin.</p>
+      </header>
+
+      <div class="settings-container">
+        <section class="settings-section">
+          <h3>Profil administrateur</h3>
+
+          <form class="edit-form" id="profile-settings-form" data-api="true" action="#" method="post">
+            <div class="form-group">
+              <label for="admin-name">Nom complet</label>
+              <input type="text" id="admin-name" name="admin_name" placeholder="Fode Lamine Diane" value="Fode Lamine Diane" />
+            </div>
+
+            <div class="form-group">
+              <label for="admin-email">Email administrateur</label>
+              <input type="email" id="admin-email" name="admin_email" placeholder="admin@example.com" value="admin@example.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="admin-username">Nom d'utilisateur</label>
+              <input type="text" id="admin-username" name="admin_username" placeholder="username" value="admin" />
+            </div>
+
+            <div class="form-group">
+              <label for="admin-password">Nouveau mot de passe</label>
+              <input type="password" id="admin-password" name="admin_password" placeholder="Laisser vide pour garder le mot de passe actuel" />
+            </div>
+
+            <div class="form-group">
+              <label for="admin-password-confirm">Confirmer le mot de passe</label>
+              <input type="password" id="admin-password-confirm" name="admin_password_confirm" placeholder="Confirmer le mot de passe" />
+            </div>
+
+            <button type="submit" class="button-primary">Mettre à jour le profil</button>
+          </form>
+        </section>
+
+        <section class="settings-section">
+          <h3>Paramètres du site</h3>
+
+          <form class="edit-form" id="site-settings-form" data-api="true" action="#" method="post">
+            <div class="form-group">
+              <label for="site-title">Titre du site</label>
+              <input type="text" id="site-title" name="site_title" placeholder="Mon Portfolio" value="Mon Portfolio" />
+            </div>
+
+            <div class="form-group">
+              <label for="site-description">Description du site</label>
+              <textarea id="site-description" name="site_description" rows="3" placeholder="Description courte du site">Portfolio professionnel de Fode Lamine Diane, développeur frontend</textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="site-language">Langue du site</label>
+              <select id="site-language" name="site_language">
+                <option value="fr" selected>Français</option>
+                <option value="en">Anglais</option>
+                <option value="es">Espagnol</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="maintenance-mode">Mode maintenance</label>
+              <select id="maintenance-mode" name="maintenance_mode">
+                <option value="disabled">Désactivé</option>
+                <option value="enabled">Activé</option>
+              </select>
+              <p class="field-help">Quand activé, affiche un message de maintenance à la place du site.</p>
+            </div>
+
+            <button type="submit" class="button-primary">Enregistrer les paramètres</button>
+          </form>
+        </section>
+
+        <section class="settings-section">
+          <h3>Sécurité et données</h3>
+
+          <div class="security-options">
+            <article class="security-card">
+              <h4>Sauvegarder les données</h4>
+              <p>Contenu par défaut : cette fonctionnalité permettra de télécharger une sauvegarde des données du site.</p>
+              <button class="button-secondary">Télécharger une sauvegarde</button>
+            </article>
+
+            <article class="security-card">
+              <h4>Logs d'activité</h4>
+              <p>Contenu par défaut : visualisez toutes les modifications apportées au site.</p>
+              <a href="#" class="button-secondary">Voir les logs</a>
+            </article>
+
+            <article class="security-card">
+              <h4>Réinitialiser le site</h4>
+              <p>Contenu par défaut : attention, cette action réinitialisera tout le contenu du site.</p>
+              <button class="button-secondary button-danger">Réinitialiser</button>
+            </article>
+          </div>
+        </section>
+
+        <section class="settings-section">
+          <h3>Intégrations</h3>
+
+          <form class="edit-form" id="integration-settings-form" data-api="true" action="#" method="post">
+            <div class="form-group">
+              <label for="analytics-id">ID Google Analytics</label>
+              <input type="text" id="analytics-id" name="analytics_id" placeholder="UA-XXXXXXXXX-X" />
+              <p class="field-help">Contenu par défaut : pour tracker les visites du site.</p>
+            </div>
+
+            <div class="form-group">
+              <label for="smtp-host">Serveur SMTP (Email)</label>
+              <input type="text" id="smtp-host" name="smtp_host" placeholder="smtp.example.com" />
+              <p class="field-help">Contenu par défaut : pour envoyer les emails depuis le formulaire de contact.</p>
+            </div>
+
+            <button type="submit" class="button-primary">Enregistrer les intégrations</button>
+          </form>
+        </section>
+      </div>
+
+      <div class="form-actions">
+        <a href="dashboard.html" class="button-secondary">Retour au tableau de bord</a>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

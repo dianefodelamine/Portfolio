@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Édition de la page d'accueil dans l'admin du portfolio de Fode Lamine Diane.">
+  <meta name="keywords" content="admin, édition, accueil">
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/main.css">
+  <title>Admin - Éditer Accueil</title>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+  <div class="admin-layout">
+    <header class="admin-header">
+      <div class="admin-header-inner">
+        <h1 class="admin-title">Tableau de bord administrateur</h1>
+        <div class="admin-user">
+          <span class="user-name">Fode Lamine Diane</span>
+          <a href="login.html" class="logout-button">Déconnexion</a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="admin-sidebar">
+      <ul class="sidebar-menu">
+        <li class="menu-item">
+          <a href="dashboard.html">Tableau de bord</a>
+        </li>
+        <li class="menu-section">Gestion du contenu</li>
+        <li class="menu-item active">
+          <a href="edit-home.html">Page d'accueil</a>
+        </li>
+        <li class="menu-item">
+          <a href="edit-about.html">À propos</a>
+        </li>
+        <li class="menu-item">
+          <a href="edit-projects.html">Projets</a>
+        </li>
+        <li class="menu-item">
+          <a href="edit-contact.html">Contact</a>
+        </li>
+        <li class="menu-section">Interactions</li>
+        <li class="menu-item">
+          <a href="messages.html">Messages</a>
+        </li>
+        <li class="menu-item">
+          <a href="questions.html">Questions du chatbot</a>
+        </li>
+        <li class="menu-section">Gestion</li>
+        <li class="menu-item">
+          <a href="settings.html">Paramètres</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="admin-main" id="main-content">
+      <header class="page-header">
+        <h2>Éditer la page d'accueil</h2>
+        <p>Contenu par défaut : modifiez les éléments ci-dessous pour mettre à jour votre page d'accueil.</p>
+      </header>
+
+      <form class="edit-form" action="#" method="post">
+        <section class="form-section">
+          <h3>Section Présentation (Hero)</h3>
+
+          <div class="form-group">
+            <label for="portrait-image">Image de portrait</label>
+            <input type="file" id="portrait-image" name="portrait_image" accept="image/*" />
+            <div id="portrait-preview" class="image-preview" aria-live="polite"></div>
+            <p class="field-help">Téléversez une image (jpg/png/webp/gif/svg). Taille max : 5MB.</p>
+          </div>
+
+          <div class="form-group">
+            <label for="intro-text">Texte d'introduction</label>
+            <input type="text" id="intro-text" name="intro_text" placeholder="Ex: Bonjour, je suis" value="Bonjour, je suis" />
+          </div>
+
+          <div class="form-group">
+            <label for="title">Titre principal</label>
+            <input type="text" id="title" name="title" placeholder="Ex: Fode Lamine Diane" value="Fode Lamine Diane" />
+          </div>
+
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea id="description" name="description" rows="4" placeholder="Description courte">Développeur Frontend créatif, spécialisé dans la réalisation de sites web modernes et accessibles.</textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="button-1-text">Texte bouton 1</label>
+            <input type="text" id="button-1-text" name="button_1_text" placeholder="Ex: Voir mes projets" value="Voir mes projets" />
+          </div>
+
+          <div class="form-group">
+            <label for="button-1-link">Lien bouton 1</label>
+            <input type="text" id="button-1-link" name="button_1_link" placeholder="Ex: projects.html" value="projects.html" />
+          </div>
+
+          <div class="form-group">
+            <label for="button-2-text">Texte bouton 2</label>
+            <input type="text" id="button-2-text" name="button_2_text" placeholder="Ex: Me contacter" value="Me contacter" />
+          </div>
+
+          <div class="form-group">
+            <label for="button-2-link">Lien bouton 2</label>
+            <input type="text" id="button-2-link" name="button_2_link" placeholder="Ex: contact.html" value="contact.html" />
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h3>Section Motivation</h3>
+
+          <div class="form-group">
+            <label for="motivation-title">Titre</label>
+            <input type="text" id="motivation-title" name="motivation_title" placeholder="Ma motivation" value="Ma motivation" />
+          </div>
+
+          <div class="form-group">
+            <label for="motivation-text">Texte</label>
+            <textarea id="motivation-text" name="motivation_text" rows="4" placeholder="Texte de motivation">Chaque projet est une opportunité d'apprendre, d'innover et de proposer une expérience agréable à l'utilisateur.</textarea>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h3>Section Ce que je fais</h3>
+
+          <div class="form-group">
+            <label>Articles (services/compétences)</label>
+            <p class="field-help">Contenu par défaut : liste des services principaux.</p>
+          </div>
+
+          <article class="form-item">
+            <div class="form-group">
+              <label for="service-1-title">Service 1 - Titre</label>
+              <input type="text" id="service-1-title" name="service_1_title" placeholder="Design responsive" value="Design responsive" />
+            </div>
+            <div class="form-group">
+              <label for="service-1-desc">Service 1 - Description</label>
+              <textarea id="service-1-desc" name="service_1_desc" rows="2" placeholder="Description">Création d'interfaces fluides et adaptées à tous les écrans.</textarea>
+            </div>
+          </article>
+
+          <article class="form-item">
+            <div class="form-group">
+              <label for="service-2-title">Service 2 - Titre</label>
+              <input type="text" id="service-2-title" name="service_2_title" placeholder="Projets web" value="Projets web" />
+            </div>
+            <div class="form-group">
+              <label for="service-2-desc">Service 2 - Description</label>
+              <textarea id="service-2-desc" name="service_2_desc" rows="2" placeholder="Description">Développement de sites et applications avec une attention portée sur l'expérience utilisateur.</textarea>
+            </div>
+          </article>
+
+          <article class="form-item">
+            <div class="form-group">
+              <label for="service-3-title">Service 3 - Titre</label>
+              <input type="text" id="service-3-title" name="service_3_title" placeholder="Maintenance" value="Maintenance" />
+            </div>
+            <div class="form-group">
+              <label for="service-3-desc">Service 3 - Description</label>
+              <textarea id="service-3-desc" name="service_3_desc" rows="2" placeholder="Description">Suivi et amélioration continue des projets pour garantir performance et stabilité.</textarea>
+            </div>
+          </article>
+        </section>
+
+        <section class="form-section">
+          <h3>Section Galerie</h3>
+
+          <div class="form-group">
+            <label>Images de galerie</label>
+            <p class="field-help">Contenu par défaut : 6 emplacements pour les images de conférences/événements.</p>
+          </div>
+
+          <div class="gallery-upload">
+            <div class="form-item">
+              <label for="gallery-1">Image 1</label>
+              <input type="file" id="gallery-1" name="gallery_1" accept="image/*" />
+              <input type="text" name="gallery_1_caption" placeholder="Légende" value="Image de conférence - contenu par défaut" />
+            </div>
+
+            <div class="form-item">
+              <label for="gallery-2">Image 2</label>
+              <input type="file" id="gallery-2" name="gallery_2" accept="image/*" />
+              <input type="text" name="gallery_2_caption" placeholder="Légende" value="Image de conférence - contenu par défaut" />
+            </div>
+
+            <div class="form-item">
+              <label for="gallery-3">Image 3</label>
+              <input type="file" id="gallery-3" name="gallery_3" accept="image/*" />
+              <input type="text" name="gallery_3_caption" placeholder="Légende" value="Image de conférence - contenu par défaut" />
+            </div>
+
+            <div class="form-item">
+              <label for="gallery-4">Image 4</label>
+              <input type="file" id="gallery-4" name="gallery_4" accept="image/*" />
+              <input type="text" name="gallery_4_caption" placeholder="Légende" value="Image de conférence - contenu par défaut" />
+            </div>
+
+            <div class="form-item">
+              <label for="gallery-5">Image 5</label>
+              <input type="file" id="gallery-5" name="gallery_5" accept="image/*" />
+              <input type="text" name="gallery_5_caption" placeholder="Légende" value="Image de conférence - contenu par défaut" />
+            </div>
+
+            <div class="form-item">
+              <label for="gallery-6">Image 6</label>
+              <input type="file" id="gallery-6" name="gallery_6" accept="image/*" />
+              <input type="text" name="gallery_6_caption" placeholder="Légende" value="Image de conférence - contenu par défaut" />
+            </div>
+          </div>
+        </section>
+
+        <div class="form-actions">
+          <button type="submit" class="button-primary">Enregistrer les modifications</button>
+          <a href="dashboard.html" class="button-secondary">Annuler</a>
+        </div>
+      </form>
+    </main>
+  </div>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

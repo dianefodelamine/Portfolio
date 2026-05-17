@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Édition de la page À propos dans l'admin du portfolio de Fode Lamine Diane.">
+  <meta name="keywords" content="admin, édition, à propos">
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/main.css">
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+  <title>Admin - Éditer À propos</title>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+  <div class="admin-layout">
+    <header class="admin-header">
+      <div class="admin-header-inner">
+        <h1 class="admin-title">Tableau de bord administrateur</h1>
+        <div class="admin-user">
+          <span class="user-name">Fode Lamine Diane</span>
+          <a href="login.html" class="logout-button">Déconnexion</a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="admin-sidebar">
+      <ul class="sidebar-menu">
+        <li class="menu-item">
+          <a href="dashboard.html">Tableau de bord</a>
+        </li>
+        <li class="menu-section">Gestion du contenu</li>
+        <li class="menu-item">
+          <a href="edit-home.html">Page d'accueil</a>
+        </li>
+        <li class="menu-item active">
+          <a href="edit-about.html">À propos</a>
+        </li>
+        <li class="menu-item">
+          <a href="edit-projects.html">Projets</a>
+        </li>
+        <li class="menu-item">
+          <a href="edit-contact.html">Contact</a>
+        </li>
+        <li class="menu-section">Interactions</li>
+        <li class="menu-item">
+          <a href="messages.html">Messages</a>
+        </li>
+        <li class="menu-item">
+          <a href="questions.html">Questions du chatbot</a>
+        </li>
+        <li class="menu-section">Gestion</li>
+        <li class="menu-item">
+          <a href="settings.html">Paramètres</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="admin-main" id="main-content">
+      <header class="page-header">
+        <h2>Éditer la page À propos</h2>
+        <p>Contenu par défaut : modifiez les éléments ci-dessous pour mettre à jour votre page à propos.</p>
+      </header>
+
+      <form class="edit-form" action="#" method="post">
+        <section class="form-section">
+          <h3>Section Introduction</h3>
+
+          <div class="form-group">
+            <label for="about-title">Titre principal</label>
+            <input type="text" id="about-title" name="about_title" placeholder="À propos de moi" value="À propos de moi" />
+          </div>
+
+          <div class="form-group">
+            <label for="about-intro">Texte d'introduction</label>
+            <textarea id="about-intro" name="about_intro" rows="3" placeholder="Texte d'introduction">Je suis un développeur frontend passionné par la création d'interfaces claires, accessibles et élégantes.</textarea>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h3>Section Parcours</h3>
+
+          <div class="form-group">
+            <label for="about-parcours-title">Titre</label>
+            <input type="text" id="about-parcours-title" name="about_parcours_title" placeholder="Mon parcours" value="Mon parcours" />
+          </div>
+
+          <div class="form-group">
+            <label for="about-parcours-text">Contenu du parcours</label>
+            <div id="editor-about-parcours" style="height: 150px;">Avec plusieurs années d'expérience en création de sites web, je travaille sur des projets variés allant des landing pages aux applications web interactives.</div>
+            <input type="hidden" id="about-parcours-text" name="about_parcours_text" value="Avec plusieurs années d'expérience en création de sites web, je travaille sur des projets variés allant des landing pages aux applications web interactives.">
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h3>Cartes d'information</h3>
+
+          <article class="form-item">
+            <h4>Carte 1 - Compétences</h4>
+            <div class="form-group">
+              <label for="card-1-title">Titre</label>
+              <input type="text" id="card-1-title" name="card_1_title" placeholder="Compétences" value="Compétences" />
+            </div>
+            <div class="form-group">
+              <label for="card-1-content">Contenu (liste)</label>
+              <textarea id="card-1-content" name="card_1_content" rows="4" placeholder="HTML sémantique&#10;CSS moderne&#10;Accessibilité">HTML sémantique
+CSS moderne
+Accessibilité</textarea>
+            </div>
+          </article>
+
+          <article class="form-item">
+            <h4>Carte 2 - Approche</h4>
+            <div class="form-group">
+              <label for="card-2-title">Titre</label>
+              <input type="text" id="card-2-title" name="card_2_title" placeholder="Approche" value="Approche" />
+            </div>
+            <div class="form-group">
+              <label for="card-2-content">Contenu</label>
+              <textarea id="card-2-content" name="card_2_content" rows="4" placeholder="Texte">Écoute du besoin, prototype simple et livraison de projets fiables avec une base propre et maintenable.</textarea>
+            </div>
+          </article>
+
+          <article class="form-item">
+            <h4>Carte 3 - Valeurs</h4>
+            <div class="form-group">
+              <label for="card-3-title">Titre</label>
+              <input type="text" id="card-3-title" name="card_3_title" placeholder="Valeurs" value="Valeurs" />
+            </div>
+            <div class="form-group">
+              <label for="card-3-content">Contenu</label>
+              <textarea id="card-3-content" name="card_3_content" rows="4" placeholder="Texte">Confiance, transparence et qualité sont au cœur de mon processus de création.</textarea>
+            </div>
+          </article>
+        </section>
+
+        <div class="form-actions">
+          <button type="submit" class="button-primary">Enregistrer les modifications</button>
+          <a href="dashboard.html" class="button-secondary">Annuler</a>
+        </div>
+      </form>
+    </main>
+  </div>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

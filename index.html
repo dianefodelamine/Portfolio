@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Fode Lamine Diane, développeur Frontend spécialisé en sites web modernes et accessibles.">
+  <meta name="keywords" content="développeur, frontend, portfolio, web">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+  <link rel="stylesheet" href="css/public-features.css">
+  <title>Portfolio Accueil</title>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <nav class="main-navigation" aria-label="Navigation principale">
+
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html">Accueil</a></li>
+          <li class="nav-item"><a href="user/about.html">À propos</a></li>
+          <li class="nav-item"><a href="user/projects.html">Projects</a></li>
+          <li class="nav-item"><a href="user/contact.html">Contact</a></li>
+          <li class="nav-item">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le thème">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-home" id="main-content">
+    <section class="hero-section">
+      <div class="container hero-content">
+        <div class="hero-media">
+          <figure class="hero-portrait">
+            <img src="assets/images/portrait-fictif.jpg" alt="Portrait de Fode Lamine Diane" class="hero-photo">
+          </figure>
+        </div>
+        <div class="hero-copy">
+          <p class="hero-intro">Bonjour, je suis</p>
+          <h1 class="hero-title">Fode Lamine Diane</h1>
+          <p class="hero-description">Développeur Frontend créatif, spécialisé dans la réalisation de sites web modernes et accessibles.</p>
+          <div class="hero-actions">
+            <a href="user/projects.html" class="button">Voir mes projets</a>
+            <a href="user/contact.html" class="button button-secondary">Me contacter</a>
+          </div>
+          <section class="motivation-section reveal">
+            <h2 class="section-title">Ma motivation</h2>
+            <p>Chaque projet est une opportunité d’apprendre, d’innover et de proposer une expérience agréable à l’utilisateur. Je m’engage à créer des interfaces claires, performantes et bien pensées pour accompagner vos idées jusqu’à leur meilleur rendu.</p>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="overview-section">
+      <div class="container">
+        <h2 class="section-title reveal">Ce que je fais</h2>
+        <p class="section-note">Contenu par défaut : ces éléments sont des exemples, remplaçables plus tard via une interface ou un backend.</p>
+        <ul class="overview-list">
+          <li class="overview-item reveal">
+            <h3>Design responsive</h3>
+            <p>Création d’interfaces fluides et adaptées à tous les écrans.</p>
+          </li>
+          <li class="overview-item reveal">
+            <h3>Projets web</h3>
+            <p>Développement de sites et applications avec une attention portée sur l’expérience utilisateur.</p>
+          </li>
+          <li class="overview-item reveal">
+            <h3>Maintenance</h3>
+            <p>Suivi et amélioration continue des projets pour garantir performance et stabilité.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <div class="container">
+        <h2 class="section-title reveal">Galerie</h2>
+        <p class="gallery-description">Contenu par défaut : ces images et légendes sont des exemples à remplacer plus tard via une interface graphique ou un backend.</p>
+        <div class="gallery-grid" id="gallery-grid">
+          <p class="gallery-loading">Chargement de la galerie...</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© 2026 Fode Lamine Diane. Tous droits réservés.</p>
+    </div>
+  </footer>
+  <script src="js/theme.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/scroll-reveal.js" defer></script>
+  <script src="js/public-features.js" defer></script>
+</body>
+</html>
